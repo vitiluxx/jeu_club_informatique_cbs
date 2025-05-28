@@ -1,0 +1,160 @@
+/* Sidebar */
+body
+{
+    margin: 0;/* elimination des espaces tout aux bordures de la page car certain navigateurs mettent des valeurs de margin non voulu a notre page*/
+    padding: 0;/*elimination des espaces inutile a l'interieur de la boite de page car certain navigateurs mettent des valeurs de padding non voulu a notre page*/
+    word-spacing: 0px; /* Réduire l'espacement entre les mots */
+}
+.sidebar {
+    width: 250px;
+    background-color: #343a40;
+    color: white;
+    padding-top: 20px;
+    flex-shrink: 0;
+    height: 100vh;
+    position: fixed;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar a {
+    color: #d1d5db;
+    text-decoration: none;
+    padding: 12px 20px;
+    display: block;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+    font-size: 0.9rem;
+}
+
+.sidebar a:hover {
+    background-color: #495057;
+    color: white;
+    border-left: 3px solid #007bff;
+}
+
+.sidebar a i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.sidebar .btn {
+    margin: 10px;
+    width: calc(100% - 20px);
+}
+
+.sidebar h3 {
+    padding: 0 20px;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #f8f9fa;
+}
+
+.sidebar ul {
+    padding-left: 0;
+}
+
+.sidebar li {
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+/* Contenu principal */
+.main-content {
+    flex-grow: 1;
+    margin-left: 250px; /* Même largeur que le sidebar */
+    transition: margin-left 0.3s ease;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-fluid {
+    padding: 20px;
+    flex: 1;
+}
+
+.boutton_rouge_reinitialiser {
+    background-color: #de2019;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.boutton_rouge_reinitialiser:hover {
+    background-color: #c9302c;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        left: -250px;
+    }
+    
+    .sidebar.active {
+        left: 0;
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
+    
+    .sidebar-toggle {
+        display: block;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 1050;
+        background-color: #343a40;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+}
+
+/* Bouton Toggle (à ajouter dans votre header) */
+.sidebar-toggle {
+    display: none; /* Masqué par défaut sur desktop */
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1050;
+    background-color: #343a40;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.sidebar-toggle:hover {
+    background-color: #495057;
+}
+
+/* Style pour la page active */
+.sidebar a.active {
+    background-color: #495057;
+    color: white;
+    border-left: 3px solid #007bff;
+    font-weight: 500;
+}
+
+.main-content.sidebar-active {
+    transform: translateX(250px);
+    position: relative;
+    overflow: hidden;
+}
+
+@media (min-width: 769px) {
+    .sidebar-toggle {
+        display: none !important;
+    }
+}

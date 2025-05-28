@@ -1,51 +1,60 @@
-  <!----------------debut: CORPS DE LA PAGE -------------------------->
-<main id="body-form_publierEEC">
-    <div class="div-form_contenu">
-    
-        <form method="post">
-            
-            <p id="p-form_admin"> PUBLIER UN JEU </p>
-           
-                <label for="choix_jeux">Choisir le type de jeu: </label>
-                
-                <select name="choix_jeux" id="choix_jeux">
-                    <option value="">Quel est votre choix</option>
-                    <option value="solo">SOLO</option>
-                    <option value="duel">DUEL</option>
-                </select>
-          
-            
-            <div>
-                <label for="libelle_exe">LA QUESTION: </label>
-                    <textarea class="textarea-form_admin" name="question" placeholder="Ennocé du jeu" required></textarea>
-                </div>
-                <div>
-                    <label for="libelle_exe">REPONSE A: </label>
-                    <textarea class="textarea-form_admin" name="reponse_a" placeholder="Ennocé du jeu" required></textarea>
-                </div>
-                <div>
-                    <label for="libelle_exe">REPONSE B: </label>
-                    <textarea class="textarea-form_admin" name="reponse_b" placeholder="Ennocé du jeu" required></textarea>
-                </div>
-                <div>
-                    <label for="libelle_exe">REPONSE C </label>
-                    <textarea class="textarea-form_admin" name="reponse_c" placeholder="Ennocé du jeu" required></textarea>
-                </div>
-                <div>
-                    <label for="libelle_exe">REPONSE D: </label>
-                    <textarea class="textarea-form_admin" name="reponse_d" placeholder="Ennocé du jeu" required></textarea>
-                </div>
+<!-------------- Inclure la Sidebar -------------->
+<?php include(ADMIN_ROOT.'sidebar.php'); ?>
+<!--------------------------------------------------------->
 
-            <div>
-                <label for="libelle_bonne_reponse">Saisir la Bonne reponse du jeu ici: </label>
-                <textarea class="textarea-form_admin" name="bonne_reponse" placeholder="Ennocé de la reponse correcte"></textarea>
-            </div>
-    
-            <button type="submit" name="soumettre"> ENVOYER </button>
-    
-        </form>
-    
-    </div>
+<!-------------------------------------------------------------> 
+<!-- Inclure le TAG d'ouverture du contenu principale -->
+<?php include(ADMIN_ROOT.'openContenuPrincipale.php'); ?>
+<!--------------------------------------------------------------->
+<!----------------debut: CORPS DE LA PAGE -------------------------->
+<main id="main-publier-jeu">
+    <form method="post" class="form-publier-jeu">
+        
+        <p id="titre-form-publier-jeu">PUBLIER UN JEU</p>
+       
+        <div class="form-group-publier-jeu">
+            <label for="choix_jeux_jeu">Choisir le type de jeu: </label>
+            <select name="choix_jeux" id="choix_jeux_jeu" class="select-publier-jeu">
+                <option value="">Quel est votre choix</option>
+                <option value="solo">SOLO</option>
+                <option value="duel">DUEL</option>
+            </select>
+        </div>
+        
+        <div class="form-group-publier-jeu">
+            <label for="question_jeu">LA QUESTION: </label>
+            <textarea id="question_jeu" class="textarea-publier-jeu" name="question" placeholder="Énoncé du jeu" required></textarea>
+        </div>
+        
+        <div class="form-group-publier-jeu">
+            <label for="reponse_a_jeu">REPONSE A: </label>
+            <textarea id="reponse_a_jeu" class="textarea-publier-jeu" name="reponse_a" placeholder="Réponse A" required></textarea>
+        </div>
+        
+        <div class="form-group-publier-jeu">
+            <label for="reponse_b_jeu">REPONSE B: </label>
+            <textarea id="reponse_b_jeu" class="textarea-publier-jeu" name="reponse_b" placeholder="Réponse B" required></textarea>
+        </div>
+        
+        <div class="form-group-publier-jeu">
+            <label for="reponse_c_jeu">REPONSE C: </label>
+            <textarea id="reponse_c_jeu" class="textarea-publier-jeu" name="reponse_c" placeholder="Réponse C" required></textarea>
+        </div>
+        
+        <div class="form-group-publier-jeu">
+            <label for="reponse_d_jeu">REPONSE D: </label>
+            <textarea id="reponse_d_jeu" class="textarea-publier-jeu" name="reponse_d" placeholder="Réponse D" required></textarea>
+        </div>
 
+        <div class="form-group-publier-jeu">
+            <label for="bonne_reponse_jeu">Saisir la Bonne réponse du jeu ici: </label>
+            <textarea id="bonne_reponse_jeu" class="textarea-publier-jeu textarea-bonne-reponse" name="bonne_reponse" placeholder="Bonne réponse"></textarea>
+        </div>
+
+        <button type="submit" name="soumettre" class="btn-submit-publier-jeu">ENVOYER</button>
+    </form>
 </main>
 <!----------------fin: CORPS DE LA PAGE ---------------------------->
+<!----- Inclure le TAG de fermeture du contenu principale --------->
+<?php include(ADMIN_ROOT.'closeContenuPrincipale.php'); ?>
+<!--------------------------------------------------------------->

@@ -88,6 +88,13 @@ class allMethod
 
         include(VIEW_ROOT."mainSolo.php");
     }
+    /*============================================================================================================================ */    
+    public function affichePageDashboard()
+    { 
+
+        include(ADMIN_ROOT."dashboard.php");
+    }
+    
 
     
 }

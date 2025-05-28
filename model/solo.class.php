@@ -31,10 +31,11 @@
 
         public function AfficheListeDeTirages_Solo()
         {
-            $requette = $this->connexionBd->query('SELECT tirage_solo FROM solo');
+            $requette = $this->connexionBd->query('SELECT id_solo, tirage_solo FROM solo');
             $donnees = $requette->fetchAll(PDO::FETCH_OBJ);
             return $donnees;
         }
+
         
         public function setInsererTirageSolo($tirage_solo)
         {
@@ -51,6 +52,13 @@
             $requette->bindParam(':id_solo', $id_solo, PDO::PARAM_INT);
             $requette->execute();
         }
+
+        public function resetTousLesTirages()
+        {
+            $requette = $this->connexionBd->prepare('UPDATE solo SET tirage_solo = 0');
+            $requette->execute();
+        }
+
     }
 
     ?>

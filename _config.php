@@ -21,4 +21,8 @@
     define('ASSET_HOST', HOST.'asset/');
     define('ASSET_ROOT', ROOT.'asset/');
 
+    define('ADMIN_HOST', HOST.'administration/');
+    define('ADMIN_ROOT', ROOT.'administration/');
+    
+
 ?>

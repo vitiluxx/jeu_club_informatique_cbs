@@ -13,6 +13,7 @@
                           "solo.php" =>                ["controller" => "allMethod", "method" => "affichePageSolo"],                    
                           "jeux.php" =>                ["controller" => "allMethod", "method" => "affichePageJeux"],                      
                           "mainSolo.php" =>            ["controller" => "allMethod", "method" => "affichePageMainSolo"],                      
+                          "dashboard.php" =>           ["controller" => "allMethod", "method" => "affichePageDashboard"],                      
 
                           "formulaire" =>              ["controller" => "allMethod", "method" => "affichePageFormulaire"],
                           "accueil" =>                 ["controller" => "allMethod", "method" => "affichePageAccueil" ], 
@@ -20,7 +21,8 @@
                           "filiere" =>                 ["controller" => "allMethod", "method" => "affichePageFiliere"], 
                           "solo" =>                    ["controller" => "allMethod", "method" => "affichePageSolo"],                    
                           "jeux" =>                    ["controller" => "allMethod", "method" => "affichePageJeux"],                      
-                           
+                          "dashboard" =>               ["controller" => "allMethod", "method" => "affichePageDashboard"], 
+                        
                         ];
     
     
