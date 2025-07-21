@@ -2,7 +2,7 @@
 Ceci est un jeu de competition, de defis, de QCM et de culture generale dans le domaine de l'informatique qui est accessible et reserver a tout public 
 
 **1. But général de l'application**
-Ton application est une plateforme de jeux de compétition pour un club informatique (année 2023-2024). Elle permet :
+L'application est une plateforme de jeux de compétition pour un club informatique (année 2023-2024). Elle permet :
 - De publier des jeux/questions (mode solo ou duel)
 - De jouer à ces jeux (tirage aléatoire, réponses, gestion des scores)
 - De gérer des lots/récompenses
